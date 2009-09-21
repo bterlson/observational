@@ -14,7 +14,7 @@ module Observational
     end
 
     def observes_action?(action)
-      actions.include?(action)
+      actions.include?(action.to_sym)
     end
 
     protected
