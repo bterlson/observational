@@ -48,6 +48,6 @@ class Creditor
   end
 end
 
-require 'observational/active_record'
-ActiveRecord::Base.send(:include, Observational::ActiveRecordObservers)
+require 'observational/active_record_observers'
+User.send(:include, Observational::ActiveRecordObservers)
 

@@ -11,7 +11,7 @@ describe "Observational::ActiveRecord" do
     describe "observing #{callback}" do
       it "should fire the observer during that callback" do
         self.expects(:subscription).with(@user)
-        observes :user, :invokes => :subscription, :on => callback
+        observes :user, :invokes => :subscription, :on => callback.to_sym
         @user.send :callback, callback
       end
     end
